@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <h1>Evidencia 2 Diseño de aplicaciones web</h1>
+        <h1></h1>
     </header>
 
     @yield('content')
@@ -20,7 +20,7 @@
     @yield('anotherContent')
 
     <footer>
-        ESTE ES EL FOOTER
+        
     </footer>
 </body>
 
