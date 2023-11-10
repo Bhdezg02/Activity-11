@@ -37,7 +37,7 @@
         <form class="destroy-form" action="{{ route('courses.destroy', $course->id) }}">
             @method('DELETE')
             @csrf
-            <button type="Submit" class="destroy-button">Delete</button>+
+            <button type="Submit" class="destroy-button">Delete</button>
         </form>
     </td>
 </tr>
