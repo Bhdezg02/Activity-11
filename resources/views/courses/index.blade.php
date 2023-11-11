@@ -34,15 +34,15 @@
 
         <a class="edit-course-button" href="{{ route('courses.edit', $course->id) }}">Edit Course</a>
 
-        <form class="destroy-form" action="{{ route('courses.destroy', $course->id) }}">
-            @method('DELETE')
+        <form action="{{ route('courses.destroy', $course->id) }}" method="POST">
             @csrf
-            <button type="Submit" class="destroy-button">Delete</button>
+            @method('delete')
+            <button type="submit">Delete</button>
         </form>
     </td>
 </tr>
 @endforeach
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 @endpush

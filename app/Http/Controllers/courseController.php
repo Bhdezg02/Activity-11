@@ -22,6 +22,15 @@ class courseController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'language' => 'required',
+            'difficulty' => 'required',
+            'instructor' => 'required',
+            'email' => 'required',
+        ]);
+
         $course = new Course;
         $course->title = $request->title;
         $course->description = $request->description;
@@ -73,7 +82,7 @@ class courseController extends Controller
     {
         $course = Course::find($id);
         
-        $courses->destroy();
+        $course->delete();
         return redirect()->route('courses.index');
     }
 }

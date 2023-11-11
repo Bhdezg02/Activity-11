@@ -11,12 +11,27 @@
 
     <label for="title">Title</label>
     <input type="text" id="title" name="title">
+    @error('title')
+        <div class="alert alert-danger">
+            <small style='color: red'>{{ $message }}</small>
+        </div>
+    @enderror
 
     <label for="description">Description</label>
     <textarea id="description" name="description"></textarea>
+    @error('description')
+        <div class="alert alert-danger">
+            <small style='color: red'>{{ $message }}</small>
+        </div>
+    @enderror
 
     <label for="language">Language</label>
     <input type="text" id="language" name="language">
+    @error('language')
+        <div class="alert alert-danger">
+            <small style='color: red'>{{ $message }}</small>
+        </div>
+    @enderror
 
     <label for="difficulty">Difficulty</label>
     <select name="difficulty" id="difficulty">
@@ -24,12 +39,27 @@
         <option value="Intermediate">Intermediate</option>
         <option value="Advanced">Advanced</option>
     </select>
+    @error('difficulty')
+        <div class="alert alert-danger">
+            <small style='color: red'>{{ $message }}</small>
+        </div>
+    @enderror
 
     <label for="instructor">Instructor</label>
     <input type="text" id="instructor" name="instructor">
+    @error('instructor')
+        <div class="alert alert-danger">
+            <small style='color: red'>{{ $message }}</small>
+        </div>
+    @enderror
 
     <label for="email">Email</label>
     <input type="email" id="email" name="email">
+    @error('email')
+        <div class="alert alert-danger">
+            <small style='color: red'>{{ $message }}</small>
+        </div>
+    @enderror
 
     <label for="image">Image</label>
     <input type="file" id="image" name="image">
@@ -39,6 +69,6 @@
 
 @push('styles')
 
-<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 @endpush
